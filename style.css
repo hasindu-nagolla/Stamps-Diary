@@ -1,292 +1,210 @@
-* {
+﻿/* 
+  Classic Web Design Stylesheet 
+  Uses standard fonts, basic colors, and simple layout techniques.
+*/
+
+/* We are clearing the space around things to start fresh */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
     margin: 0;
     padding: 0;
 }
 
-
-.header {
-    background-color: #fff;
-    height: 100%;
-    width: 100%;
-    position: relative;
-    z-index: 1;
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(5, 9, 30, 0.7), rgba(5, 9, 30, 0.7)),
-        url('images/Homepage-Background.jpg');
-    background-position: center;
+/* The body is the whole page. We add a picture to the background */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #05091e;
+    background-image: linear-gradient(rgba(5, 9, 30, 0.7), rgba(5, 9, 30, 0.7)), url('images/Homepage-Background.jpg');
     background-size: cover;
-
-
+    background-position: center;
+    background-attachment: fixed;
+    color: #ffffff;
+    /* White text for readability */
+    line-height: 1.6;
 }
 
+/* The top banner where our website name goes */
+header {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 36px;
+}
+
+header p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Our menu bar */
 nav {
-    display: flex;
-    padding: 2% 6%;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-nav img {
-    width: 150px;
-
-}
-
-.nav-links {
-    flex: 2;
-    text-align: right;
-}
-
-.nav-links ul li {
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
-}
-
-.nav-links ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.nav-links ul li::after {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: red;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-}
-
-.nav-links ul li:hover::after {
-    width: 100%;
-
-}
-
-.text-box {
-    width: 90%;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    background-color: transparent;
     text-align: center;
-}
-
-.text-box h1 {
-    font-size: 62px;
-}
-
-.text-box p {
-    margin: 10px 0 40px;
-    font-size: 14px;
-    color: white
-}
-
-.visit {
-    display: inline-block;
-    text-decoration: none;
-    color: white;
-    border: 2px solid white;
-    padding: 10px 34px;
-    font-size: 13px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.visit:hover {
-    border: 1px solid red;
-    background: red;
-    transition: 1s;
-    transform-style: preserve-3d;
-}
-
-nav .pic {
-    display: none;
-}
-
-@media(max-width: 700px) {
-
-    .text-box h1 {
-        font-size: 18px;
-    }
-
-
-    .nav-links li {
-        display: block;
-    }
-
-    .nav-links {
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        position: absolute;
-        background: transparent;
-        height: 100vh;
-        width: 200px;
-        top: 0;
-        right: -200px;
-        text-align: left;
-        z-index: 2;
-        transition: 1s;
-    }
-
-    nav .pic {
-        display: block;
-        color: red;
-        margin: 10px;
-        font-size: 22px;
-        cursor: pointer;
-    }
-
-    .nav-links ul {
-        padding: 30px;
-    }
-}
-
-/*--------------------------About.html---------------------------------------------------*/
-
-.category {
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 50px;
-
-
-}
-
-h1 {
-    font-size: 35px;
-    font-weight: lighter;
-    color: aliceblue;
-}
-
-p {
-
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 22px;
     padding: 10px;
-    color: aliceblue;
 }
 
-.p {
-    color: #777;
+nav ul {
+    list-style-type: none;
 }
 
-
-.description {
-    margin-top: 5%;
-    display: flex;
-    justify-content: space-between;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+nav li {
+    display: inline;
+    margin-right: 15px;
 }
 
-.sub-description {
-    flex-basis: 30%;
-    background-color: rgb(224, 224, 224);
-    margin-bottom: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
-    padding: 20px 12px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    transition: 1s;
-
-
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
 }
 
-h3 {
-    text-align: center;
-    font-weight: 500;
-    margin: 10px 0;
+nav a:visited {
+    color: #eeeeee;
 }
 
-.sub-description:hover {
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+nav a:active {
+    color: #ff0000;
 }
 
-@media(max-width: 700px) {
-    .description {
-        flex-direction: column;
-    }
+nav a:hover {
+    text-decoration: underline;
 }
 
-/*--------------------*/
-h1 {
-    color: aliceblue;
-    font-weight: bolder;
-}
-
-
-
-.catg {
+/* The box that holds our main text and pictures */
+section.main-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    margin: 20px auto;
+    padding: 20px;
     width: 80%;
-    margin: auto;
+    border: 1px solid #ffffff;
+}
+
+/* Titles inside our page */
+h1,
+h2,
+h3 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+/* How our normal text looks */
+p {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* We make links blue so you know they are clickable */
+section.main-content a {
+    color: #add8e6;
+    /* Light blue link color for visibility */
+}
+
+/* How we arrange the stamp pictures in a row */
+.category-item {
+    display: inline-block;
+    width: 30%;
+    margin: 1%;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
     text-align: center;
-    padding-top: 5%;
+    box-sizing: border-box;
+    vertical-align: top;
 }
 
-.catg-description {
-    flex-basis: 32%;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    position: relative;
-    overflow: hidden;
+.category-item img {
+    border: 2px solid #ffffff;
+    max-width: 100%;
+    height: auto;
 }
 
-.catg-description img {
-    width: 70%;
-
+.category-item h3 {
+    margin-top: 10px;
+    font-size: 18px;
 }
 
+/* How our forms look (like the contact form) */
+form {
+    margin-top: 20px;
+}
 
+.form-group {
+    margin-bottom: 15px;
+}
 
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
 
-
-
-
-
-.layer {
-    background: transparent;
-    height: 100%;
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
     width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: 1s;
+    max-width: 400px;
+    padding: 5px;
+    border: 1px solid #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
 }
 
-.layer:hover {
-    background: rgba(10, 10, 10, 0.7);
-}
-
-.layer h3 {
-    width: 100%;
-    font-weight: 600;
-    color: white;
-    font-size: 25px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-    transition: 1s;
+button,
+input[type="submit"] {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 5px 15px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
     cursor: pointer;
 }
 
-.layer:hover h3 {
-    bottom: 49%;
-    opacity: 2;
-    marker-start: #777;
+button:hover,
+input[type="submit"]:hover {
+    background-color: #ffffff;
+    color: #000000;
 }
 
-.content {
-    width: 80%;
-    margin: auto;
+/* The box for our contact details */
+.contact-info {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #ffffff;
+}
+
+.contact-info h4 {
+    margin-top: 10px;
+}
+
+.contact-info a {
+    color: #add8e6;
+}
+
+/* The bottom part of our website */
+footer {
     text-align: center;
-    padding-top: 100px;
+    padding: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #ffffff;
+    font-size: 12px;
+    color: #dddddd;
 }

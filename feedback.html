@@ -1,71 +1,65 @@
-<html>
+﻿<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>feedback forum</title>
-    <link rel="stylesheet" href="feedback.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-    <script src="navigation.js"></script>
-
+    <meta charset="UTF-8" />
+    <title>Stamps Diary - Feedback</title>
+    <!-- This links to our CSS file to make things look pretty! -->
+    <link rel="stylesheet" href="style.css?v=2" />
 </head>
 
-<body class="body">
+<body>
+    <!-- This is the top part of our website with the main title -->
+    <header>
+        <h1>Leave Feedback</h1>
+        <p>Tell us what you think</p>
+    </header>
 
+    <!-- Here is our menu so people can click to other pages -->
     <nav>
-
-        <div class="nav-links" id="navLinks">
-            <img class="pic" src="images/close-icon.png" style="width: 20px;" onclick="hideMenu()">
-
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html" target="_blank">ABOUT</a></li>
-                <li><a href="category.html" target="_blank">CATEGORY</a></li>
-                <li><a href="feedback.html" target="_blank">FEEDBACK</a></li>
-                <li><a href="contact.html" target="_blank">CONTACT</a></li>
-            </ul>
-        </div>
-        <img class="pic" src="images/menu-icon.png" style="width: 20px;" onclick="showMenu()">
-
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="category.html">CATEGORY</a></li>
+            <li><a href="feedback.html">FEEDBACK</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
     </nav>
 
-    <section class="adjest">
+    <!-- This is where the main text and pictures go for this page -->
+    <section class="main-content">
+        <h2>Feedback Forum</h2>
+        <p>We appreciate your thoughts! Please leave your feedback below.</p>
 
-        <div id="feedback-form">
-            <h2>Leave Feedback</h2>
-            <form>
-                <div>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" v-model="name">
-                </div>
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" v-model="email">
-                </div>
-                <div>
-                    <label for="message">Message:</label>
-                    <textarea id="message" v-model="message"></textarea>
-                </div>
-                <button type="submit" @click.prevent="submitForm">Submit</button>
-            </form>
-        </div>
+        <!-- A simple form for users to fill out -->
+        <form action="#" method="get">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" />
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" />
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" cols="50" rows="7"></textarea>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Submit Feedback" />
+            </div>
+        </form>
+
     </section>
-    <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
-    <script src="feedback.js"></script>
-     
-    <script>
-        var navLinks = document.getElementById("navLinks");
 
-        function showMenu() {
-            navLinks.style.right = "0";
-        }
-
-        function hideMenu() {
-            navLinks.style.right = "-200px"
-        }
-    </script>
+    <!-- The bottom part of our website -->
+    <footer>
+        <p>&copy; 2024 Stamps Diary. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>
+
